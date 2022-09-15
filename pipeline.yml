@@ -1,0 +1,15 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "dev"
+          password: "dev"
+  authorizationStrategy: loggedInUsersCanDoAnything
+
+  # make sure our jenkins master has 1 executor so that we can run our pipelines
+  # numExecutors: 1
+
+# specify the seedjob groovy script that will create the  pipelines for us
+jobs:
+  - file: /usr/local/seedjob.groovy
