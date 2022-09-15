@@ -1,12 +1,4 @@
 jenkins:
-  securityRealm:
-    local:
-      allowsSignup: false
-      users:
-        - id: "dev"
-          password: "dev"
-  authorizationStrategy: loggedInUsersCanDoAnything
-
   # make sure our jenkins master has 1 executor so that we can run our pipelines
   # numExecutors: 1
 
