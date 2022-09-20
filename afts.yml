@@ -2,47 +2,7 @@ jenkins:
   agentProtocols:
   - "JNLP4-connect"
   - "Ping"
-  authorizationStrategy:
-    roleBased:
-      roles:
-        global:
-        - assignments:
-          - "dev"
-          name: "Dev"
-          pattern: ".*"
-          permissions:
-          - "Overall/Read"
-          - "View/Create"
-          - "View/Delete"
-          - "View/Read"
-          - "View/Configure"
-        - assignments:
-          - "testuser1"
-          name: "Ops"
-          pattern: ".*"
-          permissions:
-          - "Job/Move"
-          - "Job/Build"
-          - "Job/Create"
-          - "View/Create"
-          - "Job/Discover"
-          - "Job/Read"
-          - "Run/Delete"
-          - "Job/Cancel"
-          - "Overall/Read"
-          - "Run/Update"
-          - "Job/Delete"
-          - "View/Delete"
-          - "Job/Configure"
-          - "Job/Workspace"
-          - "View/Read"
-          - "View/Configure"
-        - assignments:
-          - "dev_godric"
-          name: "admin"
-          pattern: ".*"
-          permissions:
-          - "Overall/Administer"
+  authorizationStrategy: "loggedInUsersCanDoAnything"
   crumbIssuer:
     standard:
       excludeClientIPFromCrumb: false
