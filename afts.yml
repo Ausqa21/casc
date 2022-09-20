@@ -30,8 +30,6 @@ jenkins:
         name: "dev"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
         - "mailer"
         - "favorite"
         - "myView"
@@ -48,15 +46,11 @@ jenkins:
         - mailer:
             emailAddress: "ausqa95@gmail.com"
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
         - "favorite"
       - id: "testuser1"
         name: "test user one"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
         - "favorite"
         - "myView"
         - preferredProvider:
